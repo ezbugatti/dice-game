@@ -13,6 +13,8 @@ function restart() {
   document.getElementById("score-1").textContent = "0";
   document.getElementById("current-0").textContent = "0";
   document.getElementById("current-1").textContent = "0";
+  document.getElementById("name-0").textContent = "Player 1";
+  document.getElementById("name-1").textContent = "Player 2";
   DicePhoto.style.display = "none";
 }
 
@@ -39,7 +41,7 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
     score[activePlayer] = score[activePlayer] + roundScore;
     document.getElementById("score-" + activePlayer).textContent =
       score[activePlayer];
-    if (score[activePlayer] >= 10) {
+    if (score[activePlayer] >= 50) {
       document.getElementById("name-" + activePlayer).textContent = "Winner";
       IsNewGame = false;
     } else {
